@@ -2,7 +2,7 @@
 ## Coming soon by August 20th
 
 Photoacoustic (PA) imaging, a hybrid modality
-combining optical absorption contrast with acoustic penetra￾tion, holds significant potential for non-invasive visualization
+combining optical absorption contrast with acoustic penetration, holds significant potential for non-invasive visualization
 of peripheral vessels, particularly in image-guided robotic
 surgical applications. However, the development of robotic PA
 imaging systems is hindered by the complexity of acoustic wave
