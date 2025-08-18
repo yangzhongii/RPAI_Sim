@@ -1,0 +1,286 @@
+action-tutorials-py==0.14.4
+actionlib==1.14.3
+ament-cmake-test==1.1.6
+ament-copyright==0.10.7
+ament-cppcheck==0.10.7
+ament-cpplint==0.10.7
+ament-flake8==0.10.7
+ament-index-python==1.2.0
+ament-lint==0.10.7
+ament-lint-cmake==0.10.7
+ament-package==0.13.1
+ament-pep257==0.10.7
+ament-uncrustify==0.10.7
+ament-xmllint==0.10.7
+angles==1.9.14
+asttokens @ file:///home/conda/feedstock_root/build_artifacts/asttokens_1733250440834/work
+base_local_planner==1.17.3
+beartype==0.20.2
+bondpy==1.8.7
+camera-calibration-parsers==1.12.1
+catkin==0.8.12
+catkin-pkg==1.0.0
+certifi==2025.7.14
+cfgv==3.4.0
+charset-normalizer==3.4.2
+comm @ file:///home/conda/feedstock_root/build_artifacts/comm_1733502965406/work
+contourpy==1.3.2
+controller-manager==0.20.0
+controller-manager-msgs==0.20.0
+coverage==7.8.0
+cupy==13.5.1
+cv-bridge==1.16.2
+cycler==0.12.1
+Cython==3.1.2
+debugpy @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_debugpy_1752827112/work
+decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1740384970518/work
+deepdiff==8.5.0
+demo-nodes-py==0.14.4
+Deprecated==1.2.18
+diagnostic-updater==1.12.1
+distlib==0.3.9
+distro==1.9.0
+docutils==0.21.2
+domain-coordinator==0.9.2
+dynamic-reconfigure==1.7.6
+ellipsinator==0.3.0
+examples-rclpy-executors==0.11.2
+examples-rclpy-minimal-action-client==0.11.2
+examples-rclpy-minimal-action-server==0.11.2
+examples-rclpy-minimal-client==0.11.2
+examples-rclpy-minimal-publisher==0.11.2
+examples-rclpy-minimal-service==0.11.2
+examples-rclpy-minimal-subscriber==0.11.2
+exceptiongroup @ file:///home/conda/feedstock_root/build_artifacts/exceptiongroup_1746947292760/work
+executing @ file:///home/conda/feedstock_root/build_artifacts/executing_1745502089858/work
+fastrlock==0.8.3
+filelock==3.18.0
+fonttools==4.59.0
+fsspec==2025.7.0
+gazebo_plugins==2.9.3
+gazebo_ros==2.9.3
+gencpp==0.7.2
+geneus==3.0.0
+genlisp==0.4.18
+genmsg==0.6.1
+gennodejs==2.0.2
+genpy==0.6.18
+h5py==3.13.0
+identify==2.6.12
+idna==3.10
+image-geometry==3.1.3
+imageio==2.37.0
+importlib_metadata @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_importlib-metadata_1747934053/work
+iniconfig==2.1.0
+interactive-markers==1.12.2
+ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1719845459717/work
+ipython @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_ipython_1748711175/work
+jaxtyping==0.3.2
+jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1733300866624/work
+Jinja2==3.1.6
+joint-state-publisher==1.15.2
+joint-state-publisher-gui==1.15.2
+jupyter_client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1733440914442/work
+jupyter_core @ file:///home/conda/feedstock_root/build_artifacts/jupyter_core_1748333051527/work
+# Editable install with no version control (k-Wave-python==0.4.1)
+-e /home/thera/Downloads/k-wave-python-master
+kdl-parser-py==1.14.2
+kiwisolver==1.4.8
+kornia==0.8.1
+kornia_rs==0.1.9
+laser-geometry==1.6.8
+launch==0.17.2
+launch-param-builder==0.1.1
+launch-ros==0.14.5
+launch-testing==0.17.2
+launch-testing-ros==0.14.5
+launch-xml==0.17.2
+launch-yaml==0.17.2
+lazy_loader==0.4
+llvmlite==0.44.0
+MarkupSafe==3.0.2
+math3d==4.0.0
+matlab==0.1
+matplotlib==3.10.3
+matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1733416936468/work
+mbf_abstract_nav==0.4.0
+message-filters==1.17.4
+moveit-commander==1.1.16
+moveit-configs-utils==2.3.0
+moveit-core==1.1.16
+moveit-python==0.4.5
+moveit-ros-planning-interface==1.1.16
+moveit-ros-visualization==1.1.16
+moveit-task-constructor-core==0.1.3
+mpmath==1.3.0
+nest_asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1733325553580/work
+networkx==3.4.2
+nodeenv==1.9.1
+numba==0.61.2
+numpy==1.26.4
+nvidia-cublas-cu12==12.8.4.1
+nvidia-cuda-cupti-cu12==12.8.90
+nvidia-cuda-nvrtc-cu12==12.8.93
+nvidia-cuda-runtime-cu12==12.8.90
+nvidia-cudnn-cu12==9.8.0.87
+nvidia-cufft-cu12==11.3.3.83
+nvidia-cufile-cu12==1.13.1.3
+nvidia-curand-cu12==10.3.9.90
+nvidia-cusolver-cu12==11.7.3.90
+nvidia-cusparse-cu12==12.5.8.93
+nvidia-cusparselt-cu12==0.7.1
+nvidia-nccl-cu12==2.26.5
+nvidia-nvjitlink-cu12==12.8.93
+nvidia-nvshmem-cu12==3.2.5
+nvidia-nvtx-cu12==12.8.90
+opencv-python==4.11.0.86
+orderly-set==5.5.0
+osrf-pycommon==2.0.0
+packaging @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_packaging_1745345660/work
+parso @ file:///home/conda/feedstock_root/build_artifacts/parso_1733271261340/work
+pexpect @ file:///home/conda/feedstock_root/build_artifacts/pexpect_1733301927746/work
+phantominator==0.7.0
+pickleshare @ file:///home/conda/feedstock_root/build_artifacts/pickleshare_1733327343728/work
+pillow==11.3.0
+platformdirs @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_platformdirs_1746710438/work
+pluggy==1.6.0
+pre_commit==4.2.0
+prompt_toolkit @ file:///home/conda/feedstock_root/build_artifacts/prompt-toolkit_1744724089886/work
+psutil @ file:///home/conda/feedstock_root/build_artifacts/psutil_1740663128538/work
+ptyprocess @ file:///home/conda/feedstock_root/build_artifacts/ptyprocess_1733302279685/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl#sha256=92c32ff62b5fd8cf325bec5ab90d7be3d2a8ca8c8a3813ff487a8d2002630d1f
+pure_eval @ file:///home/conda/feedstock_root/build_artifacts/pure_eval_1733569405015/work
+Pygments @ file:///home/conda/feedstock_root/build_artifacts/pygments_1750615794071/work
+pyparsing==3.2.3
+pytest==8.4.1
+python-dateutil @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_python-dateutil_1751104122/work
+python-qt-binding==0.4.6
+pytorch-triton==3.3.1+gitc8757738
+PyYAML==6.0.2
+pyzmq @ file:///home/conda/feedstock_root/build_artifacts/pyzmq_1749898457097/work
+qt-dotgraph==0.4.5
+qt-gui==0.4.5
+qt-gui-cpp==0.4.5
+qt-gui-py-common==0.4.5
+quality-of-service-demo-py==0.14.4
+rclpy==1.9.3
+rcutils==4.0.4
+requests==2.32.3
+resource-retriever==1.12.10
+ros2action==0.13.5
+ros2bag==0.9.2
+ros2cli==0.13.5
+ros2component==0.13.5
+ros2doctor==0.13.5
+ros2interface==0.13.5
+ros2launch==0.14.5
+ros2lifecycle==0.13.5
+ros2multicast==0.13.5
+ros2node==0.13.5
+ros2param==0.13.5
+ros2pkg==0.13.5
+ros2run==0.13.5
+ros2service==0.13.5
+ros2topic==0.13.5
+rosbag==1.17.4
+rosbag2-py==0.9.2
+rosboost-cfg==1.15.10
+rosclean==1.15.10
+roscreate==1.15.10
+rosgraph==1.17.4
+rosidl-adapter==2.2.3
+rosidl-cli==2.2.3
+rosidl-cmake==2.2.3
+rosidl-generator-c==2.2.3
+rosidl-generator-cpp==2.2.3
+rosidl-generator-py==0.11.4
+rosidl-parser==2.2.3
+rosidl-runtime-py==0.9.1
+rosidl-typesupport-c==1.2.1
+rosidl-typesupport-cpp==1.2.1
+rosidl-typesupport-fastrtps-c==1.2.1
+rosidl-typesupport-fastrtps-cpp==1.2.1
+rosidl-typesupport-introspection-c==2.2.3
+rosidl-typesupport-introspection-cpp==2.2.3
+roslaunch==1.17.4
+roslib==1.15.10
+roslint==0.12.0
+roslz4==1.17.4
+rosmake==1.15.10
+rosmaster==1.17.4
+rosmsg==1.17.4
+rosnode==1.17.4
+rosparam==1.17.4
+rospkg==1.6.0
+rospy==1.17.4
+rosservice==1.17.4
+rostest==1.17.4
+rostopic==1.17.4
+rosunit==1.15.10
+roswtf==1.17.4
+rpyutils==0.2.0
+rqt-action==0.4.11
+rqt-bag==0.5.3
+rqt-bag-plugins==0.5.3
+rqt-console==0.4.14
+rqt-dep==0.4.14
+rqt-graph==0.4.16
+rqt-gui==0.5.5
+rqt-gui-py==0.5.5
+rqt-image-view==0.4.19
+rqt-launch==0.4.10
+rqt-logger-level==0.4.13
+rqt-msg==0.4.12
+rqt-plot==0.4.16
+rqt-publisher==0.4.12
+rqt-py-common==0.5.5
+rqt-py-console==0.4.12
+rqt-reconfigure==0.5.7
+rqt-robot-steering==0.5.14
+rqt-service-caller==0.4.12
+rqt-shell==0.4.13
+rqt-srv==0.4.11
+rqt-tf-tree==0.6.5
+rqt-top==0.4.11
+rqt-topic==0.4.15
+rqt-web==0.4.11
+rviz==1.14.26
+scikit-image==0.25.2
+scipy==1.15.2
+sensor-msgs==1.13.2
+six @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_six_1753199211/work
+smclib==1.8.7
+srdfdom==0.6.4
+sros2==0.10.3
+ssfp==1.2.0
+stack_data @ file:///home/conda/feedstock_root/build_artifacts/stack_data_1733569443808/work
+sympy==1.14.0
+teleop-twist-keyboard==2.3.2
+testfixtures==8.3.0
+tf==1.13.4
+tf-conversions==1.13.4
+tf2-geometry-msgs==0.7.10
+tf2-kdl==0.7.10
+tf2-py==0.7.10
+tf2-ros==0.7.10
+tf2-ros-py==0.17.5
+tf2-tools==0.17.5
+tifffile==2025.5.10
+tomli==2.2.1
+topic-monitor==0.14.4
+topic-tools==1.17.4
+torch==2.8.0.dev20250612+cu128
+tornado @ file:///home/conda/feedstock_root/build_artifacts/tornado_1748003301700/work
+tqdm==4.67.1
+trac_ik_python==1.6.7
+traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1733367359838/work
+triton==3.3.1
+typing_extensions @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_typing_extensions_1751643513/work
+urdfdom-py==0.4.6
+urllib3==2.5.0
+urx==0.11.0
+virtualenv==20.31.2
+wadler_lindig==0.1.7
+wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1733231326287/work
+wrapt==1.17.2
+xacro==1.14.20
+zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1749421620841/work
