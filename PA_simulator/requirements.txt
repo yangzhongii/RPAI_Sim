@@ -85,8 +85,6 @@ matlabengine==9.13.1
 matplotlib==3.7.2
 mbf_abstract_nav==0.4.0
 message-filters==1.17.4
-mkl-fft @ file:///croot/mkl_fft_1695058164594/work
-mkl-random @ file:///croot/mkl_random_1695059800811/work
 mkl-service==2.4.0
 moveit-commander==1.1.16
 moveit-configs-utils==2.3.0
@@ -170,8 +168,6 @@ rosidl-generator-c==2.2.3
 rosidl-generator-cpp==2.2.3
 rosidl-generator-py==0.11.4
 rosidl-parser==2.2.3
-# Editable install with no version control (rosidl-runtime-py==0.9.1)
--e /opt/ros/galactic/lib/python3.8/site-packages
 rosidl-typesupport-c==1.2.1
 rosidl-typesupport-cpp==1.2.1
 rosidl-typesupport-fastrtps-c==1.2.1
@@ -249,8 +245,6 @@ tqdm==4.67.1
 trac_ik_python==1.6.7
 triton==2.3.0
 typing_extensions==4.13.2
-tzdata==2025.2
--e git+https://github.com/ros-industrial/universal_robot.git@e4c1c42e854e45084ad827adca6a6bda00324955#egg=ur_kinematics&subdirectory=ur_kinematics
 urdfdom-py==0.4.6
 urwid==2.6.16
 urwid_readline==0.15.1

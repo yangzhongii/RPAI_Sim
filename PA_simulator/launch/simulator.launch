@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="pa_simulator" type="simulator.py" name="simulator" output="screen"/>
+    <node pkg="pa_simulator" type="vessel_pose.py" name="vessel_pose" output="screen"/>
+</launch>

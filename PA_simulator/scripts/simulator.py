@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import vtk
 import rospy
 from geometry_msgs.msg import PoseStamped, Point, Quaternion, TransformStamped

@@ -39,3 +39,9 @@ target_link_libraries(kwave_simulation
   ${HDF5_LIBRARIES}
   OpenMP::OpenMP_CXX
 )
+
+catkin_install_python(PROGRAMS
+  scripts/kwave_ros_simulator_2d.py
+  scripts/kwave_ros_simulator_3d.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+) 

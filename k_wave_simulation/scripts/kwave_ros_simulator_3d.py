@@ -1,3 +1,6 @@
+#!/home/thera/anaconda3/envs/kwave/bin python
+# -*- coding: utf-8 -*-
+
 import numpy as np
 from skimage.transform import resize
 import h5py

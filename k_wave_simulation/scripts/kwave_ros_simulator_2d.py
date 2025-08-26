@@ -1,7 +1,11 @@
+#!/home/thera/anaconda3/envs/kwave/bin python
+# -*- coding: utf-8 -*-
+
 import rospy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
+import sys
 from skimage.transform import resize
 from kwave.kgrid import kWaveGrid
 from kwave.ksource import kSource
@@ -101,20 +105,7 @@ class kwave_process:
 
             # Calculate delays (time step indices)
             delays = np.round(distances / c * fs).astype(int)
-            # print("#####delays#####",np.shape(delays))
-            # print("#####sensor_data##",np.shape(sensor_data))
-
-            
-            # Accumulate delayed signals
-            # for sensor_idx in prange(num_elements):
-                
-            #     if 0 <= delays[sensor_idx] < 4096:
-            #         p_recon[pixel_idx] += sensor_data[sensor_idx,delays[sensor_idx]]
-    #         valid_indices = np.where((delays >= 0) & (delays < 4096))[0]
-
-    # # 仅对有效索引进行操作
-    #         for idx in valid_indices:
-    #             p_recon[pixel_idx] += sensor_data[idx, delays[idx]]
+   
             valid_mask = (delays >= 0) & (delays < 4096)
             valid_indices = np.where(valid_mask)[0]
             # 向量化累加
@@ -127,14 +118,6 @@ class kwave_process:
         
         
 
-        # Assuming p_recon is the reconstructed image from previous code
-        # Initialize Hilbert transform result
-        # p_recon_hilbert = np.zeros((Nx, Ny))
-
-        # Apply Hilbert transform along each row (Y-axis) to extract envelope
-        # for x_idx in range(Nx):
-        #     analytic_signal = hilbert(p_recon[x_idx, :])
-        #     p_recon_hilbert[x_idx, :] = np.abs(analytic_signal)  # Extract envelope
 
         # Normalize
         a = np.max(p_recon)
@@ -158,135 +141,7 @@ class kwave_process:
         
 
         return uint8_data
-    # @njit(parallel=True)
-    # def reconstruction(self,sensor_data):
-    #     # Initialize reconstructed image
-    #     Nx = 256  # Number of pixels in x direction (40mm / 0.2mm = 200)
-    #     Ny = 256  # Number of pixels in y direction (40mm / 0.2mm = 200)
-    #     dx = 0.2e-3  # x resolution [m]
-    #     dy = 0.2e-3  # y resolution [m]
-    #     c = 1500  # Speed of sound [m/s]
-    #     fs = 25e6  # Sampling frequency [Hz]
-    #     dt = 1/fs  # Time step [s]
-    #     num_elements = 128  # Number of sensors
-    #     pitch = 0.3e-3  # Array pitch [m]
-    #     p_recon = np.zeros(Nx * Ny)
-    #     #     # Define imaging grid
-    #     x_vec = np.arange(-(Nx-1)/2, (Nx-1)/2 + 1) * dx  # x coordinate vector [m]
-    #     y_vec = np.arange(0, Ny) * dy  # y coordinate vector [m] (starts from y=0)
-    #     x, y = np.meshgrid(x_vec, y_vec)
-    #     pixel_positions = np.column_stack((x.ravel(), y.ravel()))  # All pixel positions
-
-    #     #     # Define sensor positions
-    #     sensor_x = np.arange(-(num_elements-1)/2, (num_elements-1)/2 + 1) * pitch  # Sensor x coordinates [m]
-    #     sensor_y = np.zeros(num_elements)  # Sensor y coordinates [m]
-    #     sensor_positions = np.column_stack((sensor_x, sensor_y))
-
-    #     for pixel_idx in prange(Nx * Ny):  # Parallelize this outer loop
-    #         # Current pixel position
-    #         pixel_pos = pixel_positions[pixel_idx, :]
-
-    #         # Calculate distances from sensors to pixel
-    #         distances = np.sqrt(np.sum((sensor_positions - pixel_pos) ** 2, axis=1))
-
-    #         # Calculate delays (time step indices)
-    #         delays = np.round(distances / c * fs).astype(int)
-
-    #         # Accumulate delayed signals
-    #         for sensor_idx in prange(num_elements):
-    #             if 0 <= delays[sensor_idx] < 4096:
-    #                 p_recon[pixel_idx] += sensor_data[sensor_idx, delays[sensor_idx]]
-
-    #      #     # Reshape to image
-    #     p_recon = p_recon.reshape(Nx, Ny)
-
-        
-
-    #     # Assuming p_recon is the reconstructed image from previous code
-    #     # Initialize Hilbert transform result
-    #     # p_recon_hilbert = np.zeros((Nx, Ny))
-
-    #     # Apply Hilbert transform along each row (Y-axis) to extract envelope
-    #     # for x_idx in range(Nx):
-    #     #     analytic_signal = hilbert(p_recon[x_idx, :])
-    #     #     p_recon_hilbert[x_idx, :] = np.abs(analytic_signal)  # Extract envelope
-
-    #     # Normalize
-    #     a = np.max(p_recon)
-    #     b = np.min(p_recon)
-    #     p_recon = (p_recon - b) / (a - b)*255
-
-    #     uint8_data = p_recon.astype(np.uint8)
-    #     # # Normalize
-    #     p_recon = p_recon / np.max(np.abs(p_recon))
-
-    #     min_val, max_val = p_recon.min(), p_recon.max()
-    #     if max_val != min_val:
-    #         normalized = (p_recon - min_val) / (max_val - min_val) * 255
-    #     else:
-    #         normalized = np.zeros_like(p_recon)
-       
-    #     uint8_data = normalized.astype(np.uint8)
-
-    #     return uint8_data
-    # def reconstruction(self, sensor_data,device):
-    # # Parameters
-    #     Nx = 256  # Number of pixels in x direction (40mm / 0.2mm = 200)
-    #     Ny = 256  # Number of pixels in y direction (40mm / 0.2mm = 200)
-    #     dx = 0.2e-3  # x resolution [m]
-    #     dy = 0.2e-3  # y resolution [m]
-    #     c = 1500  # Speed of sound [m/s]
-    #     fs = 25e6  # Sampling frequency [Hz]
-    #     dt = 1/fs  # Time step [s]
-    #     num_elements = 128  # Number of sensors
-    #     pitch = 0.3e-3  # Array pitch [m]
-
-    #     # Define imaging grid (move to GPU)
-        
-    #     x_vec = torch.arange(-(Nx-1)/2, (Nx-1)/2 + 1) * dx  # x coordinate vector [m]
-    #     y_vec = torch.arange(0, Ny) * dy  # y coordinate vector [m] (starts from y=0)
-    #     x, y = torch.meshgrid(x_vec, y_vec,indexing='ij')
-    #     pixel_positions = torch.column_stack((x.ravel(), y.ravel())).to(device)  # Move to GPU
-
-    #     # Define sensor positions (move to GPU)
-    #     sensor_x = torch.arange(-(num_elements-1)/2, (num_elements-1)/2 + 1) * pitch  # Sensor x coordinates [m]
-    #     sensor_y = torch.zeros(num_elements)  # Sensor y coordinates [m]
-    #     sensor_positions = torch.column_stack((sensor_x, sensor_y)).to(device)  # Move to GPU
-
-    #     # Initialize reconstructed image
-    #     p_recon = torch.zeros(Nx * Ny).to(device)  # Move to GPU
-
-    #     # Assume sensor_data is available as a 2D numpy array and move it to GPU
-    #     sensor_data = torch.tensor(sensor_data).to(device)
-        
-
-    #     for pixel_idx in prange(Nx * Ny):
-    #         # Current pixel position
-    #         pixel_pos = pixel_positions[pixel_idx, :]
-
-    #         # Calculate distances from sensors to pixel
-    #         distances = torch.sqrt(torch.sum((sensor_positions - pixel_pos) ** 2, dim=1))
-
-    #         # Calculate delays (time step indices)
-    #         delays = torch.round(distances / c * fs).long()
-
-    #         # Accumulate delayed signals
-    #         for sensor_idx in prange(num_elements):
-    #             if 0 <= delays[sensor_idx] < sensor_data.shape[1]:  # Ensure within bounds
-    #                 p_recon[pixel_idx] += sensor_data[sensor_idx, delays[sensor_idx]]
-    #     print("$$$$$$$$")
-    #     # Reshape to image
-    #     p_recon = p_recon.reshape(Nx, Ny)
-
-    #     # Normalize the image
-    #     a = torch.max(p_recon)
-    #     b = torch.min(p_recon)
-    #     p_recon = (p_recon - b) / (a - b) * 255
-
-    #     uint8_data = p_recon.to(torch.uint8)  # Convert to uint8
-    #     print("#########")
-    #     return uint8_data.cpu().numpy()  # Move back to CPU if necessary
-
+    
     def compress_vertical(self,uint8_data, scale_factor=5):
    
     # 确保输入是uint8格式的numpy数组
