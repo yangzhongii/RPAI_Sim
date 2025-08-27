@@ -1,6 +1,4 @@
 # RPAI_Sim:Robotic Photoacoustic Imaging Simulation Framework Based on ROS
-## Coming soon by August 20th
-
 Photoacoustic (PA) imaging, a hybrid modality
 combining optical absorption contrast with acoustic penetration, holds significant potential for non-invasive visualization
 of peripheral vessels, particularly in image-guided robotic
