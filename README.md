@@ -12,7 +12,7 @@ probe poses. RPAI-Sim integrates a 3D PA phantom, the k-Wave
 toolbox, and a robot controller to simulate signal propagation,
 detection, and reconstruction in 2D and 3D domains for any
 pose of PA probe
-<video controls src="image/video.mp4" title="Title"></video>
+<video controls src="(https://youtu.be/EEBJCAdPs5M)" title="Title"></video>
 ## This project is a photoacoustic imaging simulator based on ROS. 
 ![alt text](image/image-1.png)
 To runs codes, you need to download [Anacaonda](https://www.anaconda.com/download) or [miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main) first. Then you need to create **2** conda environments. And the platform are the followed:
